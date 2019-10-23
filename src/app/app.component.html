@@ -1,31 +1,5 @@
 
-<div id='content' class='container'>
-	<header>
-		<h1>{{ title }}</h1>
-		<h2>My favorite hero is: {{ myHero }}</h2>
-	</header>
-
-	<div class='row'>
-		<p *ngIf="heroes.length > 3" class='col-12'>
-			There are many heroes!
-		</p>
-	</div>
-	<div class='row'>
-		<h3 class='col-12'>
-			Heors:
-		</h3>
-		<ul>
-			<li *ngFor='let hero of heroes' class='text-primary text-secondary' bind-class.text-secondary="textColor">
-				{{ hero.name }}
-			</li>
-		</ul>
-	</div>
-
-	<app-custom-input [(val)]="inValue"></app-custom-input>
-	<p>{{ inValue }}</p>
-
-	<app-svg></app-svg>
+<div id='content' class='container-fluid flex-row d-flex'>
+	<app-navbar></app-navbar>
+	<router-outlet></router-outlet>
 </div>
-
-
-<router-outlet></router-outlet>
