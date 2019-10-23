@@ -15,11 +15,16 @@
 			Heors:
 		</h3>
 		<ul>
-			<li *ngFor='let hero of heroes' class='color-keyword'>
+			<li *ngFor='let hero of heroes' class='text-primary text-secondary' bind-class.text-secondary="textColor">
 				{{ hero.name }}
 			</li>
 		</ul>
 	</div>
+
+	<app-custom-input [(val)]="inValue"></app-custom-input>
+	<p>{{ inValue }}</p>
+
+	<app-svg></app-svg>
 </div>
 
 

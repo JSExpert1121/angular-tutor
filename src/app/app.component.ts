@@ -11,6 +11,7 @@ import { Hero } from './hero';
 export class AppComponent {
 	title: string;
 	myHero: string;
+	inValue: string;
 
 	heroes = [
 		new Hero(1, 'Windstorm'),
@@ -19,8 +20,12 @@ export class AppComponent {
 		new Hero(20, 'Tornado')
 	];
 
+	imageUrl = 'https://i.stack.imgur.com/eIekV.png';
+	textColor = true;
+
 	constructor() {
 		this.title = 'Angular-Tutor';
 		this.myHero = 'Windstorm';
+		this.inValue = 'Sample data';
 	}
 }
